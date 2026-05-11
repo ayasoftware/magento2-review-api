@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Ayasoftware\ReviewApi\Api\Data\ReviewInterface" type="Ayasoftware\ReviewApi\Model\Data\Review"/>
+    <preference for="Ayasoftware\ReviewApi\Api\Data\RatingVoteInterface" type="Ayasoftware\ReviewApi\Model\Data\RatingVote"/>
+    <preference for="Ayasoftware\ReviewApi\Api\GetProductReviewsInterface" type="Ayasoftware\ReviewApi\Model\GetProductReviews"/>
+    <preference for="Ayasoftware\ReviewApi\Api\ReviewRepositoryInterface" type="Ayasoftware\ReviewApi\Model\ReviewRepository"/>
+    <preference for="Ayasoftware\ReviewApi\Model\Review\Command\DeleteByIdInterface" type="Ayasoftware\ReviewApi\Model\Review\Command\DeleteById"/>
+    <preference for="Ayasoftware\ReviewApi\Model\Review\Command\SaveInterface" type="Ayasoftware\ReviewApi\Model\Review\Command\Save"/>
+    <preference for="Ayasoftware\ReviewApi\Model\Review\Command\GetInterface" type="Ayasoftware\ReviewApi\Model\Review\Command\Get"/>
+    <preference for="Ayasoftware\ReviewApi\Model\Review\Command\GetListInterface" type="Ayasoftware\ReviewApi\Model\Review\Command\GetList"/>
+    <preference for="Ayasoftware\ReviewApi\Model\ReviewValidatorInterface" type="Ayasoftware\ReviewApi\Model\ReviewValidationChain"/>
+
+    <preference for="Ayasoftware\ReviewApi\Api\Data\ReviewSearchResultInterface" type="Ayasoftware\ReviewApi\Model\ReviewSearchResult"/>
+    <preference for="Ayasoftware\ReviewApi\Model\Review\ReviewTypeResolverInterface" type="Ayasoftware\ReviewApi\Model\Review\ReviewTypeResolver"/>
+
+    <preference for="Ayasoftware\ReviewApi\Api\ReviewAggregatorInterface"
+                type="Ayasoftware\ReviewApi\Model\Review\Aggregator" />
+
+    <type name="Ayasoftware\ReviewApi\Model\ReviewValidationChain">
+        <arguments>
+            <argument name="validators" xsi:type="array">
+                <item name="title" xsi:type="object">Ayasoftware\ReviewApi\Model\Review\Validator\TitleValidator</item>
+                <item name="detail" xsi:type="object">Ayasoftware\ReviewApi\Model\Review\Validator\DetailValidator</item>
+                <item name="nickname" xsi:type="object">Ayasoftware\ReviewApi\Model\Review\Validator\NicknameValidator</item>
+                <item name="review_entity" xsi:type="object">Ayasoftware\ReviewApi\Model\Review\Validator\ReviewEntityValidator</item>
+                <item name="entity_pk_value" xsi:type="object">Ayasoftware\ReviewApi\Model\Review\Validator\EntityPkValueValidator</item>
+                <item name="stores" xsi:type="object">Ayasoftware\ReviewApi\Model\Review\Validator\StoresValidator</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

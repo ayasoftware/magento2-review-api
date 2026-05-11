@@ -1,0 +1,19 @@
+{
+  "name": "ayasoftware/magento2-review-api",
+  "description": "Review WebAPI",
+  "license": "MIT",
+  "type": "magento2-module",
+  "authors": [],
+  "require": {
+    "php": "^8.3 || ^8.4",
+    "magento/module-review": ">=100.2.0"
+  },
+  "autoload": {
+    "files": [
+      "src/registration.php"
+    ],
+    "psr-4": {
+      "Ayasoftware\\ReviewApi\\": "src/"
+    }
+  }
+}
