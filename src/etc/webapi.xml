@@ -4,37 +4,37 @@
     <route url="/V1/products/:sku/reviews" method="GET">
         <service class="Ayasoftware\ReviewApi\Api\GetProductReviewsInterface" method="execute"/>
         <resources>
-            <resource ref="Magento_Review::reviews_all"/>
+            <resource ref="Ayasoftware_ReviewApi::reviews"/>
         </resources>
     </route>
     <route url="/V1/reviews/:reviewId" method="GET">
         <service class="Ayasoftware\ReviewApi\Api\ReviewRepositoryInterface" method="get"/>
         <resources>
-            <resource ref="Magento_Review::reviews_all"/>
+            <resource ref="Ayasoftware_ReviewApi::reviews"/>
         </resources>
     </route>
     <route url="/V1/reviews/:id" method="PUT">
         <service class="Ayasoftware\ReviewApi\Api\ReviewRepositoryInterface" method="save"/>
         <resources>
-            <resource ref="Magento_Review::reviews_all"/>
+            <resource ref="Ayasoftware_ReviewApi::reviews"/>
         </resources>
     </route>
     <route url="/V1/reviews" method="POST">
         <service class="Ayasoftware\ReviewApi\Api\ReviewRepositoryInterface" method="save"/>
         <resources>
-            <resource ref="Magento_Review::reviews_all"/>
+            <resource ref="Ayasoftware_ReviewApi::reviews"/>
         </resources>
     </route>
     <route url="/V1/reviews/:reviewId" method="DELETE">
         <service class="Ayasoftware\ReviewApi\Api\ReviewRepositoryInterface" method="deleteById"/>
         <resources>
-            <resource ref="Magento_Review::reviews_all"/>
+            <resource ref="Ayasoftware_ReviewApi::reviews"/>
         </resources>
     </route>
     <route url="/V1/reviews" method="GET">
         <service class="Ayasoftware\ReviewApi\Api\ReviewRepositoryInterface" method="getList"/>
         <resources>
-            <resource ref="Magento_Review::reviews_all"/>
+            <resource ref="Ayasoftware_ReviewApi::reviews"/>
         </resources>
     </route>
 </routes>

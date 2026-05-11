@@ -20,6 +20,13 @@ Module allow:
 | /V1/reviews/ | GET |  Search reviews |
 | /V1/products/:sku/reviews | GET | Get product reviews |
 
+## ACL
+
+The module exposes a custom Magento ACL resource:
+
+- `Ayasoftware_ReviewApi::reviewapi`
+- `Ayasoftware_ReviewApi::reviews`
+
 [Docs for adding a new review with ratings](docs/api-specs.md)
 
 ### Install
