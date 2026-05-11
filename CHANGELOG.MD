@@ -2,13 +2,11 @@
 
 ### Unreleased
 
+## [1.0.3]
+
 ### Fixed
 - Allow partial review updates, including approval requests that only change `review_status`.
 - Accept legacy `status_id` input for review approval and rejection requests.
-
-## [1.4.0]
-
-Refactoring, fixes in type hinting. Support for >= PHP 7.1
 
 ## [1.3.0]
 
